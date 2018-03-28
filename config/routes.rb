@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'movies/index'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -12,6 +14,9 @@ Rails.application.routes.draw do
   
   #PANEL ROUTES
   resources :panels
+  
+  #MOVIES ROUTES
+  resources :movies
   
   
   

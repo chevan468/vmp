@@ -95,6 +95,7 @@
 		</form>
 		<ul class="nav menu">
 			<li class=""><a href="welcome"><em class="fa fa-tachometer-alt">&nbsp;</em> Tablero</a></li>
+			<li class=""><a href="movies"><em class="fa fa-film">&nbsp;</em> Películas</a></li>
 			<li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> Widgets</a></li>
 			<li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Charts</a></li>
 			<li><a href="elements.html"><em class="fa fa-toggle-off">&nbsp;</em> UI Elements</a></li>
@@ -117,11 +118,23 @@
 			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
+
+	<script>
+		window.onload = function () {
+	var chart1 = document.getElementById("line-chart").getContext("2d");
+	window.myLine = new Chart(chart1).Line(lineChartData, {
+	responsive: true,
+	scaleLineColor: "rgba(0,0,0,.2)",
+	scaleGridLineColor: "rgba(0,0,0,.05)",
+	scaleFontColor: "#c5c7cc"
+	});
+};
+	</script>
 	
-	<%= yield %>
+		<%= yield %>
 <div class="col-sm-12">
-				<p class="back-link">©2018 Todos los derechos resevados.</p>
-			</div>
+<p class="back-link">©2018 Todos los derechos resevados.</p>
+</div>
 </body>
 </html>
 
